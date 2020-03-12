@@ -82,11 +82,60 @@ def run1():
     else:
         print("He was too fast!")
         die()
+
+def fight2():
+    a = random.randint(1,5)
+    if(a == 1):
+        print("You manage to overpower him")
+        win()
+    else:
+        print("He was too strong!")
+        die()
+def fight3():
+    a = random.randint(1,2)
+    if(a == 1):
+        print("You manage to overpower him")
+        win()
+    else:
+        print("He was too strong!")
+        die()
+        
+    
+def find():
+    print("You found a knife")
+    print("There are two doors.")
+    a = int(input("1 for left two for right"))
+    if(a == 1):
+        print("There is nothing behind the door. You fall to your death")
+        die()
+    if(a == 2):
+        fight3()
+    
+def fights():
+    print("You see a 2 doors")
+    a = input(input("1 for right. 2 for left."))
+    if(a == 1):
+        print("You are attacked")
+        fight2()
+    elif(a == 2):
+        find()
         
         
 
 def back():
     print("You go home. The end.")
+
+def up():
+    print("There are two doors.")
+    a = int(input("1 for left two for right"))
+    if(a == 1):
+        print("There is nothing behind the door. You fall to your death")
+        die()
+    if(a == 2):
+        fights()
+    elif(a == 3):
+        print("You found the secret end!")          
+        win()              
 
 def inside():
     print("You a staircase going up and one going down. Where do you go?")
